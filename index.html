@@ -3,110 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meus Links</title>
+  <title>Caixas & Regalos - Nossos Canais</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cinzel:wght@400;600&family=Montserrat:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      /* Paleta de cores */
+      --marrom-principal: #6B4F3A;
+      --marrom-claro: #A67C52;
+      --dourado-suave: #D4AF7F;
+      --off-white: #F5F1EB;
+      --rose-suave: #E8CFC4;
+
+      /* Fontes */
+      --fonte-titulo: 'Playfair Display', 'Cinzel', serif;
+      --fonte-texto: 'Montserrat', 'Open Sans', sans-serif;
+    }
+    
     body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
+      font-family: var(--fonte-texto);
+      background: var(--off-white);
       margin: 0;
-      height: 100vh; /* ocupa toda a altura da tela */
-      display: flex;
-      flex-direction: column;
-      align-items: center; 
-      justify-content: center;
-      padding: 20px;
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--marrom-principal);
     }
-    h1 {
-      color: #333;
-      font-size: 2em;
-      margin-bottom: 30px;
-    }
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #4CAF50;
-      color: white;
-      padding: 15px 20px;
-      margin: 10px auto;
-      width: 80%;
-      max-width: 400px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 18px;
-      transition: background 0.3s ease;
-    }
-    a:hover {
-      background: #ffa500;
-    }
-    i {
-      font-size: 22px; /* Tamanho maior dos ícones */
-    }
-    a span {
-      flex-grow: 1;
-      text-align: left;
-      margin-left: 12px;
-    }
-    a .seta {
-      margin-left: auto;
-      color: rgba(255, 255, 255, 0.6);
-    }
-    .foto-perfil {
+    
+    .logo {
       width: 150px;
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      object-position: center;
-      margin-bottom: 10px;
-      border: 2px solid #AB7C50; /* contorno laranja opcional */
-      display: block;
-      margin: 0 auto;
-      }
-    .instagram { 
-      background: linear-gradient(45deg, #AB7C50, #F5D9AA);
-      color: white;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-    }  /* Cor específica do Instagram */
-    .site { background: linear-gradient(45deg, #AB7C50, #F5D9AA);
-      color: white;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-    }  /* Cor específica do site */
-    .tiktok {
-      background: linear-gradient(45deg, #AB7C50, #F5D9AA);
-      color: white;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
+      border: 3px solid var(--dourado-suave);
+      margin-bottom: 15px;
     }
-    .youtube { 
-      background: linear-gradient(45deg, #AB7C50, #F5D9AA);
-      color: white;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-    }    /* Cor do YouTube */
-    .whatsapp { 
-      background: linear-gradient(45deg, #AB7C50, #F5D9AA);
-      color: white;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-    }    /* Cor do WhatsApp */
+    
+    h1 {
+      font-family: var(--fonte-titulo);
+      font-size: 2em;
+      color: var(--marrom-principal);
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      font-family: var(--fonte-titulo);
+      font-style: italic;
+      color: var(--marrom-claro);
+      margin-bottom: 40px;
+    }
+
+    .descricao {
+      font-family: var(--fonte-texto);
+      font-size: 1em;
+      color: var(--marrom-principal);
+      margin: 8px 0;
+    }
+
+    .botoes {
+      margin-top: 30px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(45deg, var(--marrom-claro), var(--dourado-suave));
+      color: var(--off-white);
+      padding: 14px 20px;
+      margin: 12px auto;
+      width: 280px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    }
+
+    i {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    /* Botão principal maior */
+    .principal {
+      width: 320px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    /* Exemplo de botão rosé */
+    .rose {
+      background: linear-gradient(45deg, var(--rose-suave), var(--dourado-suave));
+    }    
   </style>
 </head>
 <body>
-  <img src="caixaseregalosn.jpg" alt="Logo" class="foto-perfil">
-  <h1> Nossos canais </h1>
-  <a href="http://www.caixaseregalos.com.br" target="_blank" class="site"><i class="fas fa-store"></i><span> Loja Virtual</span><i class="fas fa-arrow-right seta"></i></a>
-  <a href="https://instagram.com/caixaseregalos" target="_blank" class="instagram"><i class="fab fa-instagram"></i><span> Instagram</span><i class="fas fa-arrow-right seta"></i></a>
-  <a href="https://www.tiktok.com/@CaixaseRegalos" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i><span> TikTok</span><i class="fas fa-arrow-right seta"></i></a>
-  <a href="https://youtube.com/@CaixaseRegalos" target="_blank" class="youtube"><i class="fab fa-youtube"></i><span> YouTube</span><i class="fas fa-arrow-right seta"></i></a>
-  <a href="https://chat.whatsapp.com/CW7fiTBgEya3jIwHF1MQaU" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i><span> Grupo VIP</span><i class="fas fa-arrow-right seta"></i></a>
-  <a href="https://wa.me/5551994820606" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i><span> Fale Conosco</span><i class="fas fa-arrow-right seta"></i></a>
+  <img src="caixaseregalosn.jpg" alt="Logo Caixas & Regalos" class="logo">
+  <h1>Caixas & Regalos</h1>
+  <p class="tagline">Presentes com significado</p>
+ 
+  <p class="descricao">✨ Cada criação é única, pensada para surpreender com elegância e carinho</p>
+  <p class="descricao">💖 Você participa de cada detalhe da criação do seu presente</p>
+
+  <div class="botoes">
+    <a href="https://wa.me/5551994820606"><i class="fas fa-heart"></i><span>Quero um presente único</span><i class="fas fa-arrow-right seta"></i></a>
+    <a href="http://www.caixaseregalos.com.br"><i class="fas fa-gift"></i><span>Ver opções de kits</span><i class="fas fa-arrow-right seta"></i></a>
+    <a href="https://wa.me/5551994820606"><i class="fab fa-whatsapp"></i><span>Tirar dúvidas no WhatsApp</span><i class="fas fa-arrow-right seta"></i></a>
+  </div>
+  <!-- <a href="http://www.caixaseregalos.com.br" target="_blank" class="principal"><i class="fas fa-store"></i> Loja Virtual</a> -->
+  <!-- <a href="https://instagram.com/caixaseregalos" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> -->
+  <!-- <a href="https://www.tiktok.com/@CaixaseRegalos" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a> -->
+  <!-- <a href="https://youtube.com/@CaixaseRegalos" target="_blank"><i class="fab fa-youtube"></i> YouTube</a> -->
+  <!-- <a href="https://chat.whatsapp.com/CW7fiTBgEya3jIwHF1MQaU" target="_blank" class="rose"><i class="fab fa-whatsapp"></i> Grupo VIP</a> -->
+  <!-- <a href="https://wa.me/5551994820606" target="_blank"><i class="fab fa-whatsapp"></i> Fale Conosco</a> -->
 </body>
 </html>
