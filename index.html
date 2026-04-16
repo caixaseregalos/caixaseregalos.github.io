@@ -32,8 +32,8 @@
     }
     
     .logo {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid var(--dourado-suave);
@@ -44,21 +44,29 @@
       font-family: var(--fonte-titulo);
       font-size: 2em;
       color: var(--marrom-principal);
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
 
     .tagline {
       font-family: var(--fonte-titulo);
       font-style: italic;
       color: var(--marrom-claro);
-      margin-bottom: 40px;
+      margin-bottom: 25px;
     }
 
     .descricao {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-family: var(--fonte-texto);
       font-size: 1em;
       color: var(--marrom-principal);
-      margin: 8px 0;
+      margin: 8px 0;font-family: var(--fonte-texto);
+    }
+
+    .descricao i {
+      margin-right: 8px;
+      color: var(--dourado-suave);
     }
 
     .botoes {
@@ -73,8 +81,8 @@
       color: var(--off-white);
       padding: 14px 20px;
       margin: 12px auto;
-      width: 280px;
-      border-radius: 30px;
+      width: 320px;
+      border-radius: 10px;
       font-size: 16px;
       font-weight: 500;
       text-decoration: none;
@@ -87,34 +95,32 @@
       box-shadow: 0 6px 10px rgba(0,0,0,0.15);
     }
 
-    i {
-      margin-right: 10px;
-      font-size: 20px;
-    }
-
-    /* Botão principal maior */
-    .principal {
-      width: 320px;
+     a i {
       font-size: 18px;
-      font-weight: 600;
     }
 
-    /* Exemplo de botão rosé */
-    .rose {
-      background: linear-gradient(45deg, var(--rose-suave), var(--dourado-suave));
+     a span {
+      flex-grow: 1;
+      text-align: left;
+      margin-left: 12px;
+    }
+
+    a .seta {
+      margin-left: auto;
+      color: rgba(255, 255, 255, 0.9);
     }    
   </style>
 </head>
 <body>
-  <img src="caixaseregalosn.jpg" alt="Logo Caixas & Regalos" class="logo">
+  <img src="caixaseregalos_logo.jpeg" alt="Logo Caixas & Regalos" class="logo">
   <h1>Caixas & Regalos</h1>
   <p class="tagline">Presentes com significado</p>
  
-  <p class="descricao">✨ Cada criação é única, pensada para surpreender com elegância e carinho</p>
-  <p class="descricao">💖 Você participa de cada detalhe da criação do seu presente</p>
+  <p class="descricao"><i>✨</i> Cada criação é única, pensada para surpreender com elegância e carinho</p>
+  <p class="descricao"><i>💖</i> Você participa de cada detalhe da criação do seu presente</p>
 
   <div class="botoes">
-    <a href="https://wa.me/5551994820606"><i class="fas fa-heart"></i><span>Quero um presente único</span><i class="fas fa-arrow-right seta"></i></a>
+    <a href="https://wa.me/5551994820606"><i>💖</i><span>Quero um presente único</span><i class="fas fa-arrow-right seta"></i></a>
     <a href="http://www.caixaseregalos.com.br"><i class="fas fa-gift"></i><span>Ver opções de kits</span><i class="fas fa-arrow-right seta"></i></a>
     <a href="https://wa.me/5551994820606"><i class="fab fa-whatsapp"></i><span>Tirar dúvidas no WhatsApp</span><i class="fas fa-arrow-right seta"></i></a>
   </div>
